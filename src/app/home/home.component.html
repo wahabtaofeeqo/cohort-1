@@ -1,0 +1,11 @@
+<form #f="ngForm" (ngSubmit)="submit(f.value)">
+    <div>
+        <input type="text" name="name" [(ngModel)]="form.name" placeholder="Name">
+    </div>
+
+    <div>
+        <input type="email" name="email" [(ngModel)]="form.email" placeholder="Email">
+    </div>
+
+    <button>Submit</button>
+</form>
