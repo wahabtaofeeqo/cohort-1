@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,23 @@ export class HomeComponent {
     email: ''
   }
 
+  // formGroup: FormGroup = new FormGroup({
+  //   name: new FormControl('', Validators.required),
+  //   email: new FormControl('', [Validators.required, Validators.email])
+  // });
+
+  today = new Date();
+
+  formGroup: FormGroup;
+  
+  constructor(private builder: FormBuilder) {
+    this.formGroup = this.builder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]
+    })
+  }
+
   submit(value: any) {
-    console.log(value);
+    if(this.formGroup.invalid) return;
   }
 }

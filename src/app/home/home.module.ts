@@ -3,15 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ChildComponent } from './components/child/child.component';
+import { DemoPipe } from '../demo.pipe';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    ChildComponent,
+    DemoPipe
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     HomeRoutingModule
   ]
 })
