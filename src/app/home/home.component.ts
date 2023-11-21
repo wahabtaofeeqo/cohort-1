@@ -22,6 +22,16 @@ export class HomeComponent {
 
   formGroup: FormGroup;
   
+  selectedItem: any;
+  
+  items: any[] = [
+    {id: 1, name: 'Dev', role: 'FE'},
+    {id: 2, name: 'Dev', role: 'BE'},
+    {id: 3, name: 'Dev', role: 'FE'},
+    {id: 4, name: 'Dev', role: 'BE'},
+    {id: 5, name: 'Dev', role: 'FE'},
+  ]
+
   constructor(private builder: FormBuilder) {
     this.formGroup = this.builder.group({
       name: ['', Validators.required],

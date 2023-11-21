@@ -30,8 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "~/node-modules/dist/css/boostrap.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },

@@ -6,12 +6,14 @@ import { HomeComponent } from './home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChildComponent } from './components/child/child.component';
 import { DemoPipe } from '../demo.pipe';
+import { LogMeDirective } from '../log-me.directive';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ChildComponent,
-    DemoPipe
+    DemoPipe,
+    LogMeDirective
   ],
   imports: [
     CommonModule,
