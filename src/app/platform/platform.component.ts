@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CohortService } from '../cohort.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmComponent } from '../confirm/confirm.component';
 
 @Component({
   selector: 'app-platform',
@@ -8,7 +10,15 @@ import { CohortService } from '../cohort.service';
 })
 export class PlatformComponent {
 
-  constructor(public service: CohortService) {
-    
+  constructor(
+    private dialog: MatDialog,
+    public service: CohortService) {
+  }
+
+  open() {
+    this.dialog.open(ConfirmComponent, {
+      width: '450px',
+      data: {}
+    })
   }
 }
