@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { StoreModule } from '@ngrx/store';
+import { appReducer } from './app-store/reducers/app-reducer';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { StoreModule } from '@ngrx/store';
     MatDialogModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({
+      app: appReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
