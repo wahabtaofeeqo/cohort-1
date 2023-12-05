@@ -35,3 +35,18 @@
     </div>
 </div>
 
+<table class="table table-striped">
+    <tbody>
+        <tr *ngFor="let user of (users$ | async); let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.sex}}</td>
+            <td>{{user.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div *ngIf="(isUsersLoading$ | async)">
+    loading...
+</div>

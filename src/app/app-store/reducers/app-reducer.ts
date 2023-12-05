@@ -1,7 +1,7 @@
 import { createReducer, on } from "@ngrx/store"
 import { loadUser, loadUsers, usersLoaded } from "../actions/app.actions"
 
-interface AppState { // Step 1
+export interface AppState { // Step 1
     users: any[]
     skills: any[]
     isUserLoading: boolean
@@ -20,5 +20,5 @@ export const appReducer = createReducer(initialState,
 
     on(usersLoaded, (state, {data}) => {
         return {...state, users: data, isUserLoading: false}
-    })
+    }),
 )

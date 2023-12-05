@@ -27,7 +27,7 @@ import { appReducer } from './app-store/reducers/app-reducer';
     StoreModule.forRoot({
       app: appReducer
     })
-  ],
+  ], 
   providers: [],
   bootstrap: [AppComponent]
 })
