@@ -1,6 +1,6 @@
 import { Action, createAction, props } from "@ngrx/store";
 
-enum AppActions {
+export enum AppActions {
     LOAD_USER = '[USER API] Load User',
     LOAD_USERS = '[USER API] Load Users',
     USERS_LOADED = '[USER API] Users Loaded',
