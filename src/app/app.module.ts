@@ -10,6 +10,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './app-store/reducers/app-reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from './app-store/effects/UserEffects';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { appReducer } from './app-store/reducers/app-reducer';
     BrowserAnimationsModule,
     StoreModule.forRoot({
       app: appReducer
-    })
+    }),
+    EffectsModule.forRoot([UserEffects])
   ], 
   providers: [],
   bootstrap: [AppComponent]

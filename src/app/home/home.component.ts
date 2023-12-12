@@ -61,11 +61,11 @@ export class HomeComponent implements OnInit {
     //   console.log(state);
     // })
 
-    this.service.loadUsers().subscribe({
-      next: users => {
-        this.store$.dispatch(usersLoaded({data: users}))
-      }
-    })
+    // this.service.loadUsers().subscribe({
+    //   next: users => {
+    //     this.store$.dispatch(usersLoaded({data: users}))
+    //   }
+    // })
   }
 
   submit(value: any) {
